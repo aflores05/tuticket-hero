@@ -1,0 +1,937 @@
+@import 'media-queries';
+
+
+//VARIABLES
+$green: #3CBC48;
+$black: #292A2A;
+$white: #ffffff;
+$gray: #C6C6C6;
+
+  h1{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+
+    @include respond-to($phone){
+      width: 100%;
+      margin: 1em 0; 
+    }        
+  }
+
+  h2{
+    margin: 2em 0 1.5em;
+    color: $black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+
+    @include respond-to($phone) {
+        margin: 1.5em 0;
+        text-align: center;
+    }
+  }
+
+  h3{
+    margin: 1em 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    color: $white;
+
+    @include respond-to($phone) {
+        margin: 2em 0 0;
+        text-align: center;
+    }
+
+    @include respond-to($tablet-portrait) {
+      text-align: center;
+    }
+  }
+
+  p{
+    margin-bottom: 0;
+  }
+  
+  footer {
+    width: 100%;
+    padding: 1em;
+    background: $green;
+
+    @include respond-to($phone) {
+      padding: 0.5em 0;
+      background: $green;
+    }
+  }
+
+  .home-tittle{
+    margin: 1.5em 0em 1em;
+  }
+  
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .row {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+  }
+  
+  .logo:hover {
+    color: $white;
+  }
+  
+  .top-bar {
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    background: $green;
+  }
+  
+  .top-link {
+    padding: 0.5em 2em;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1em;
+    color: $white;
+    border: 2px solid $black;
+  }
+  
+  .top-link:hover {
+    color: $white;
+    border: 2px solid $white;
+  }
+  
+  .img-background {
+    padding: 19em 0 19em 0;
+    margin: 0;
+    background-image: url(../img/header01.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    @include respond-to($phone) {
+      padding: 9em 0 9em 0;
+      text-align: center;
+    }
+
+    @include respond-to($tablet-landscape) {
+      padding: 15em 0 15em 0;
+      margin: 0;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  
+  .input {
+    width: 29%;
+    padding: 0.6em 0;
+    margin: 0;
+    background: $white;
+    color: #292A2A;
+    border: 2px solid $white;
+    border-radius: 0.8em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+    @include respond-to($phone) {
+      width: 60%;
+      margin: 0;
+      padding: 0.2em;
+    }
+
+    @include respond-to($tablet-portrait) {
+      width: 60%
+    }
+
+    @include respond-to($tablet-landscape) {
+      width: 40%
+    }
+
+    @include respond-to($ipad-pro) {
+      width: 40%
+    } 
+  }    
+  
+  .button {
+    padding: 0.6em 2em;
+    margin: 0;
+    border: 2px solid $white;
+    border-radius: 0.7em;
+
+    @include respond-to($phone) {
+      padding: 0.2em 1em;
+      margin: 0;
+    }
+  }
+
+  .button-text{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .button-text:hover{
+    color: $black;
+  }
+  
+  .combo-container {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+
+    @include respond-to($phone) {
+      width: 100%;
+      margin: 1em 0 1.5em;
+    }
+
+    @include respond-to($tablet-portrait) {
+      display: inline-block;
+    }
+
+    @include respond-to($tablet-landscape) {
+      display: inline-block;
+    }
+
+    @include respond-to($ipad-pro) {
+      display: inline-block;
+      width: 50%;
+    }
+
+    @include respond-to($large-desktop) {
+      display: inline-block;
+    }
+  }
+  
+  .combo-box {
+    width: 100%;
+    margin: 0;
+    color: $black;
+    border: 1px solid $black;
+    border-radius: 0.4em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+  
+    @include respond-to($phone) {
+      width: 50%;
+      margin: 0 0 0.5em;
+    }
+
+    @include respond-to($tablet-portrait) {
+      width: 100%;
+      margin: 0 0 0.5em;
+    }
+  }
+  
+  .eventos-section {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .img-container {
+    margin: 4em 11em 0;
+  
+    @include respond-to($phone) {
+      margin: 0;
+      background-position: center;
+    }
+
+    @include respond-to($tablet-landscape) {
+      margin: 2em 2em 0;
+    }
+
+    @include respond-to($tablet-portrait) {
+      margin: 2em 2em 0;
+    }
+
+    @include respond-to($ipad-pro) {
+      margin: 3em 5em 0
+    }
+  }
+  
+  .detalle-button {
+    padding: 0.6em 4em 0.7em;
+    margin: 0 0 4em;
+    background: $green;
+    border: 2px solid  $green;
+    text-align: center;
+
+    @include respond-to($phone) {
+      padding: 0.6em 2em 0.7em;
+    }
+
+    @include respond-to($tablet-portrait) {
+      padding: .5em 2em;
+    }
+
+    @include respond-to($tablet-landscape) {
+      padding: 0.6em 2em 0.7em;
+      margin: 0 0 3em;
+    }
+
+    @include respond-to($ipad-pro) {
+      padding: 0.6em 2em 0.7em;
+      margin: 0 0 3em;
+    } 
+  }
+
+  .img-name{
+    margin: 1em 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .detalle-text{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    color: $white;
+  }
+  
+  .footer-logo {
+    display: block;
+    margin: 0.4em 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+  }
+  
+  .placephone-icon {
+    padding: 0;
+    margin: 0 0.3em 0 0.5em;
+    width: 6%;
+
+    @include respond-to($phone) {
+      margin: 0 0.3em 0 0;
+      width: 16%;
+    }
+  }
+  
+  .phone-paragraph {
+    padding: 0;
+    margin: 0.4em 0 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: center;
+    color: $white;
+  }
+  
+  .social-ul {
+    padding: 0;
+    margin: 0.3em 0 0 1em;
+    text-align: center;
+  }
+  
+  .social-link {
+    text-decoration: none;
+    color: $white;
+  }
+  
+  .social-link:hover {
+    color: $white;
+  }
+  
+  .facebook {
+    display: inline;
+    padding: 0.2em 0.6em;
+    margin: 0;
+    font-size: 1.1em;
+    text-decoration: none;
+    border: 2px solid $white;
+    color: $white;
+  }
+  
+  .img{
+    height: 240px;
+    margin: 0;
+    @include respond-to($phone) {
+      height: 138px;
+      margin: 0;
+    }
+
+    @include respond-to($tablet-portrait) {
+      padding: 0;
+      margin: 0;
+      height: 150px;
+    }
+
+    @include respond-to($tablet-landscape) {
+      padding: 0;
+      margin: 0;
+      height: 143px;
+    }
+
+    @include respond-to($ipad-pro) {
+      padding: 0;
+      margin: 0;
+      height: 180px;
+    } 
+  }
+
+  .detalle-tittle{
+    margin: 0 0 .5em;
+    color: $white;
+    text-align: left;
+
+    @include respond-to($phone) {
+        margin: 1em 0 .5em;
+        text-align: center;
+    }
+
+    @include respond-to($tablet-portrait) {
+      padding: 0.6em 2em 0.7em;
+      margin: 1em 0 0;
+      text-align: center;
+    } 
+  }
+
+  .detalle-background {
+    padding: 9em 0 5em;
+    margin: 0;
+    background: $black;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    @include respond-to($phone) {
+      padding: 7em 0 3em;
+      text-align: center;
+    }
+
+    @include respond-to($tablet-landscape) {
+      margin: 0;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .event-img{
+    height: 375px;
+
+    @include respond-to($phone) {
+        height: 200px;
+    }
+
+    @include respond-to($tablet-landscape) {
+        height: 300px;
+      }
+  }
+
+  .subtittle{
+    margin: 1em 0 0;
+    color: $white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 1rem;
+    
+    @include respond-to($phone) {
+        text-align: center;
+    }
+
+    @include respond-to($tablet-portrait) {
+      text-align: center;
+    } 
+  }
+
+  .subtittle-paragraph{
+    margin: 0;
+    color: $white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1rem;
+
+    @include respond-to($phone) {
+        text-align: center;
+    }
+  }
+
+  .relacionados-section {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .relacionados-container {
+    margin: 4em 8em 0;
+  
+    @include respond-to($phone) {
+      margin: 0;
+      background-position: center;
+    }
+
+    @include respond-to($tablet-landscape) {
+      margin: 4em 1em;
+    }
+
+    @include respond-to($tablet-portrait) {
+      margin: 2em 0 0 0;
+    }
+
+    @include respond-to($ipad-pro) {
+        margin: 0 2em;
+    } 
+  }
+
+  .img-relacionados{
+    height: 210px;
+    margin: 0;
+
+    @include respond-to($phone) {
+      height: 138px;
+      margin: 0;
+    }
+
+    @include respond-to($tablet-portrait) {
+      padding: 0;
+      margin: 0;
+      height: 128px;
+    }
+
+    @include respond-to($tablet-landscape) {
+      padding: 0;
+      margin: 0;
+      height: 128px;
+    }
+
+    @include respond-to($ipad-pro) {
+        height: 170px;
+    } 
+  }
+
+  .img-relacionados-name{
+    margin: 1em 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .reservar-submit {
+    padding: 0.6em 4em 0.7em;
+    margin: 2em 0 0;
+    background: $green;
+    border: 2px solid  $green;
+
+    @include respond-to($phone) {
+      padding: 0.6em 2em 0.7em;
+    }
+
+    @include respond-to($tablet-landscape) {
+      padding: 0.6em 2em 0.7em;
+      display: block;
+      margin: 2em 0 0;
+    }
+
+    @include respond-to($ipad-pro) {
+      padding: 0.6em 2em 0.7em;
+      margin: 2em 0;
+      display: block;
+    } 
+
+    @include respond-to($large-desktop) {
+        display: block;
+  }
+}
+
+.reservar-txt{
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.reservar-link{
+  text-decoration: none;
+}
+
+.detalle-btn {
+  padding: 0.6em 4em 0.7em;
+  margin: 0 0 4em;
+  background: $green;
+  border: 2px solid  $green;
+
+  @include respond-to($phone) {
+    padding: 0.6em 2em 0.7em;
+  }
+
+  @include respond-to($tablet-landscape) {
+    padding: 0.6em 2em 0.7em;
+    margin: 0;
+  }
+
+  @include respond-to($tablet-portrait) {
+      margin: 0 0 3em;
+      padding: .5em 1.5em;
+    }
+
+  @include respond-to($ipad-pro) {
+    padding: 0.6em 2em 0.7em;
+    margin: 0 0 14.7em;
+  } 
+}
+
+.registrar-background {
+  padding: 9em 0 27.6em;
+  margin: 0;
+  background: $black;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  @include respond-to($phone) {
+    padding: 7em 0 3em;
+    text-align: center;
+  }
+
+  @include respond-to($tablet-landscape) {
+    padding: 9em 0 26em;
+  }
+
+  @include respond-to($ipad-pro) {
+    padding: 9em 0 48.5em;
+  }
+}
+
+.registrar-subtittle{
+  margin: 0;
+  text-align: left;
+  color: $white;
+
+  @include respond-to($phone) {
+    display: none;
+  }
+
+  @include respond-to($tablet-portrait) {
+    text-align: center;
+  }
+}
+
+.tipo-entrada{
+  width: 80%;
+  padding: .7em;
+  margin: 1em 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  background: $gray;
+  color: $black;
+
+  @include respond-to($phone) {
+    text-align: center;
+    width: 100%;
+  }
+
+  @include respond-to($tablet-portrait) {
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+.cantidad{
+  width: 50%;
+  padding: .5em 0;
+  margin: 1em 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background: $green;
+  color: $white;
+
+  @include respond-to($phone) {
+    display: inline-block;
+    width: 54%;
+  }
+
+  @include respond-to($tablet-landscape) {
+    width: 80%;
+  }
+
+  @include respond-to($tablet-portrait) {
+    display: inline-block;
+  }
+
+  @include respond-to($ipad-pro) {
+    width: 57%
+  }
+}
+
+.sumar-restar{
+  padding: 0;
+  margin: 0 1.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  color: $black;
+}
+
+.btn-text{
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  
+}
+
+.btn-text:hover{
+  color: $white;
+}
+
+.btn-container{
+  @include respond-to($tablet-portrait) {
+    margin: 0 0 0 10.5em;
+  }
+}
+
+.regresar-btn{
+  display: block;
+  width: 100%;
+  padding: .5em 0;
+  margin: 0;
+  background: $gray;
+
+  @include respond-to($phone) {
+    margin: 2em 0 0;
+    width: 225%;
+  }
+
+  @include respond-to($tablet-portrait) {
+    float: right;
+    width: 250%;
+  }
+
+  @include respond-to($tablet-landscape) {
+    width: 200%;
+  }
+}
+
+.confirmar-btn{
+  display: block;
+  width: 68%;
+  padding: .5em 0;
+  margin: 0;
+  background: $green;
+
+  @include respond-to($phone) {
+    float: right;
+    margin: 2em 0 0;
+  }
+
+  @include respond-to($tablet-landscape) {
+    display: inline-block;
+    width: 55%;
+  }
+}
+
+.confirmar-background{
+  padding: 9em 0 27.6em;
+  margin: 0;
+  background: $white;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  @include respond-to($phone) {
+    padding: 7em 0 3em;
+    text-align: center;
+  }
+
+  @include respond-to($tablet-landscape) {
+    padding: 9em 0 30.2em;
+  }
+
+  @include respond-to($ipad-pro) {
+    padding: 9em 0 49em;
+  }
+}
+
+.confirmar-tittle{
+  margin: 0 0 .5em;
+  color: $black;
+  text-align: left;
+
+  @include respond-to($phone) {
+      margin: 1em 0 0;
+      text-align: center;
+  }
+
+  @include respond-to($tablet-portrait) {
+    padding: 0.6em 2em 0;
+    margin: 1em 0 0;
+    text-align: center;
+  } 
+}
+
+.confirmar-subtittle{
+  margin: 0 0 1.2em;
+  text-align: left;
+  color: $black;
+
+  @include respond-to($phone) {
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  @include respond-to($tablet-portrait) {
+    margin: .5em 0;
+    text-align: center;
+  }
+}
+
+.subtittle-container{
+  margin: 1em 0;
+
+  @include respond-to($tablet-portrait) {
+    margin: 1em 8em;
+  }
+}
+
+
+.confirmar-input {
+  float: left;;
+  width: 68%;
+  padding: 0.4em 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: $white;
+  color: #292A2A;
+  border: 2px solid $gray;
+  
+
+  @include respond-to($phone) {
+    float: unset;
+    width: 60%;
+    margin: 0;
+    padding: 0.2em;
+  }
+
+  @include respond-to($tablet-portrait) {
+    float: none;
+    margin: 1em 0;
+    width: 81%
+  }
+
+  @include respond-to($tablet-landscape) {
+    float: none;
+    width: 60%
+  }
+
+  @include respond-to($ipad-pro) {
+    float: none;
+    width: 85%
+  } 
+}   
+
+.resumen-background{
+  padding: 0 0 11.3em;
+  background: $gray;
+
+  @include respond-to($phone) {
+    padding: 0 0 3em;
+  } 
+
+  @include respond-to($tablet-portrait) {
+    padding: 0 0 3em;
+  } 
+
+  @include respond-to($tablet-landscape) {
+    padding: 0 0 13.5em;
+  } 
+
+  @include respond-to($ipad-pro) {
+    padding: 0 0 33.6em;
+  } 
+}
+
+.resumen-tittle{
+  margin: 3.5em 0 .5em;
+  color: $black;
+  text-align: center;
+
+  @include respond-to($phone) {
+      margin: 4em 0 0;
+      text-align: center;
+  }
+
+  @include respond-to($tablet-portrait) {
+    margin: 4em 0 .5em;
+    text-align: center;
+  } 
+}
+
+.resumen-subtittle{
+  margin: 0 0 1.2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: right;
+  font-size: 1.25rem;
+  color: $black;
+
+  @include respond-to($phone) {
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  @include respond-to($tablet-portrait) {
+    margin: .5em 0;
+    text-align: center;
+  }
+}
+
+.resumen-paragraph{
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  @include respond-to($phone) {
+    text-align: center;
+  }
+
+  @include respond-to($tablet-portrait) {
+    margin: .5em 0 0;
+    text-align: center;
+  }
+}
+
+
+
+
+  
+
+
+
+
+
